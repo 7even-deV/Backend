@@ -1,10 +1,10 @@
-package com.bosonit.bs3;
+package com.bosonit.bs5;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationBS3Tests {
+class ApplicationBS5Tests {
 
     @Test
     void contextLoads() {

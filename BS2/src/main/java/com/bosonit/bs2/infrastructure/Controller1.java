@@ -4,7 +4,6 @@ import com.bosonit.bs2.ApplicationBS2;
 import com.bosonit.bs2.application.IPersonService;
 import com.bosonit.bs2.domain.City;
 import com.bosonit.bs2.domain.Person;
-
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

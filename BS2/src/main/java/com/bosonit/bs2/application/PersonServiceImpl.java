@@ -1,8 +1,6 @@
 package com.bosonit.bs2.application;
 
 import com.bosonit.bs2.domain.Person;
-
-// import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 // @Component
