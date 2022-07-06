@@ -1,0 +1,15 @@
+2022-07-06 14:05:22,807 INFO org.springframework.boot.StartupInfoLogger [main] Starting ApplicationBS5 using Java 17.0.3 on L2203069 with PID 15040 (C:\Users\sergio.fuentes\Developer\IntelliJ\Backend\BS5\target\classes started by sergio.fuentes in C:\Users\sergio.fuentes\Developer\IntelliJ\Backend\BS5)
+2022-07-06 14:05:22,807 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-06 14:05:24,195 INFO org.springframework.boot.StartupInfoLogger [main] Started ApplicationBS5 in 1.817 seconds (JVM running for 2.162)
+2022-07-06 14:05:24,211 INFO com.bosonit.bs5.ApplicationBS5 [main] - I am log INFO message from ApplicationBS5.
+2022-07-06 14:05:24,212 WARN com.bosonit.bs5.ApplicationBS5 [main] - I am log WARN message from ApplicationBS5.
+2022-07-06 14:05:24,212 ERROR com.bosonit.bs5.ApplicationBS5 [main] - I am log ERROR message from ApplicationBS5.
+2022-07-06 14:05:44,191 ERROR com.bosonit.bs5.infrastructure.ErrorLogController [http-nio-8080-exec-2] java.lang.ExceptionInInitializerError
+2022-07-06 14:05:48,720 INFO com.bosonit.bs5.infrastructure.LoggingController [http-nio-8080-exec-4] - I am log INFO message from LoggingController.
+2022-07-06 14:05:48,720 WARN com.bosonit.bs5.infrastructure.LoggingController [http-nio-8080-exec-4] - I am log WARN message from LoggingController.
+2022-07-06 14:05:48,721 ERROR com.bosonit.bs5.infrastructure.LoggingController [http-nio-8080-exec-4] - I am log ERROR message from LoggingController.
+2022-07-06 14:12:03,169 WARN com.bosonit.bs5.ApplicationBS5 [main] - I am log WARN message from ApplicationBS5.
+2022-07-06 14:12:03,172 ERROR com.bosonit.bs5.ApplicationBS5 [main] - I am log ERROR message from ApplicationBS5.
+2022-07-06 14:12:14,618 ERROR com.bosonit.bs5.infrastructure.ErrorLogController [http-nio-8080-exec-2] java.lang.ExceptionInInitializerError
+2022-07-06 14:12:18,483 WARN com.bosonit.bs5.infrastructure.LoggingController [http-nio-8080-exec-1] - I am log WARN message from LoggingController.
+2022-07-06 14:12:18,484 ERROR com.bosonit.bs5.infrastructure.LoggingController [http-nio-8080-exec-1] - I am log ERROR message from LoggingController.
