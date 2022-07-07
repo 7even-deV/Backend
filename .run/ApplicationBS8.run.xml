@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ApplicationBS8" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="com.bosonit.bs8.ApplicationBS8" />
+    <module name="BS8" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.bosonit.bs8.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
