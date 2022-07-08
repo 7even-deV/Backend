@@ -9,7 +9,8 @@
 ### `The exercises are ordered according to their completion and commit:`
 
 ***
-- [x] [(HEAD -> main) BS8 - Personalizing Responses](https://github.com/Seven-z01/Backend/tree/main/BS8)
+- [x] [(HEAD -> main) EJ3 - CRUD with relations between tables](https://github.com/Seven-z01/Backend/tree/main/EJ3)
+- [x] [BS8 - Personalizing Responses](https://github.com/Seven-z01/Backend/tree/main/BS8)
 - [x] [BP1 - Hexagonal Architecture](https://github.com/Seven-z01/Backend/tree/main/BP1)
 - [x] [EJ2 - CRUD with validation](https://github.com/Seven-z01/Backend/tree/main/EJ2)
 - [x] [BS5 - Logging in Spring Boot](https://github.com/Seven-z01/Backend/tree/main/BS5)
