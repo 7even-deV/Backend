@@ -3,6 +3,7 @@ package com.bosonit.ej3.course.infrastructure.dto.input;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -21,5 +22,5 @@ public class CourseInputDTO {
 
     private Date finishDate;
 
-    private List<String> idsStudents;
+    private List<String> idsStudents = new ArrayList<>();
 }

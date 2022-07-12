@@ -6,6 +6,7 @@ import com.bosonit.ej3.student.domain.Student;
 import lombok.Data;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,7 +20,7 @@ public class CourseOutputDTO {
     private String comments;
     private Date initialDate;
     private Date finishDate;
-    private List<String> idsStudents;
+    private List<String> idsStudents = new ArrayList<>();
 
     public CourseOutputDTO(@NotNull Course course) {
         setIdCourse(course.getIdCourse());

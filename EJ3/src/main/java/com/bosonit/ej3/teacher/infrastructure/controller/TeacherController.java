@@ -41,7 +41,7 @@ public class TeacherController {
     }
 
     @PutMapping("/{id}")
-    public TeacherOutputDTO updateTeacher(@PathVariable("id") String id, TeacherInputDTO teacherInputDTO) {
+    public TeacherOutputDTO updateTeacher(@PathVariable("id") String id, @RequestBody TeacherInputDTO teacherInputDTO) {
         return updateTeacherPort.updateTeacher(id, teacherInputDTO);
     }
 }

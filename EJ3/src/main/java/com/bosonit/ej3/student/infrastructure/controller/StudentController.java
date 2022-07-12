@@ -50,7 +50,7 @@ public class StudentController {
 
     @PutMapping("/{id}")
     public StudentOutputDTO updateStudent(@PathVariable("id") String id,
-            @Valid @RequestBody StudentInputDTO studentInputDTO) {
+            @RequestBody StudentInputDTO studentInputDTO) {
         return updateStudentPort.updateStudent(id, studentInputDTO);
     }
 

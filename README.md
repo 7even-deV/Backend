@@ -9,7 +9,8 @@
 ### `The exercises are ordered according to their completion and commit:`
 
 ***
-- [x] [(HEAD -> main) EJ3 - CRUD with relations between tables](https://github.com/Seven-z01/Backend/tree/main/EJ3)
+- [x] [(HEAD -> main) BS9 - RestTemplate and Feign](https://github.com/Seven-z01/Backend/tree/main/BS9)
+- [x] [EJ3 - CRUD with relations between tables](https://github.com/Seven-z01/Backend/tree/main/EJ3)
 - [x] [BS8 - Personalizing Responses](https://github.com/Seven-z01/Backend/tree/main/BS8)
 - [x] [BP1 - Hexagonal Architecture](https://github.com/Seven-z01/Backend/tree/main/BP1)
 - [x] [EJ2 - CRUD with validation](https://github.com/Seven-z01/Backend/tree/main/EJ2)

@@ -47,7 +47,8 @@ public class CourseController {
     }
 
     @PutMapping("/{id}")
-    public CourseOutputDTO updateCourse(@PathVariable("id") String id, @RequestBody CourseInputDTO courseInputDTO) {
+    public CourseOutputDTO updateCourse(@PathVariable("id") String id,
+            @RequestBody CourseInputDTO courseInputDTO) {
         return updateCoursePort.updateCourse(id, courseInputDTO);
     }
 }

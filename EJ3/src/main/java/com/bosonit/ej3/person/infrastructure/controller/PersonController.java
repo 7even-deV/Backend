@@ -52,8 +52,7 @@ public class PersonController {
     }
 
     @PutMapping("/{id}")
-    public PersonOutputDTO updatePerson(@PathVariable("id") String id,
-                                         @Valid @RequestBody PersonInputDTO personInputDTO) {
+    public PersonOutputDTO updatePerson(@PathVariable("id") String id, @RequestBody PersonInputDTO personInputDTO) {
         return updatePersonPort.updatePerson(id, personInputDTO);
     }
 }

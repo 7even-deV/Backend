@@ -63,13 +63,13 @@ public class Person {
         setUsername(personInputDTO.getUsername());
         setPassword(personInputDTO.getPassword());
         setName(personInputDTO.getName());
+        setSurname(personInputDTO.getSurname());
         setCompanyEmail(personInputDTO.getCompanyEmail());
         setPersonalEmail(personInputDTO.getPersonalEmail());
         setCity(personInputDTO.getCity());
         setCreatedDate(new Date());
         setActive(true);
         setImageUrl(personInputDTO.getImagenUrl());
-        setSurname(personInputDTO.getSurname());
     }
 
     public void update(@NotNull PersonInputDTO personInputDTO) {

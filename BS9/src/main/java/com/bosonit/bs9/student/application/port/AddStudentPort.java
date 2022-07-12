@@ -1,0 +1,11 @@
+package com.bosonit.bs9.student.application.port;
+
+import com.bosonit.bs9.student.infrastructure.dto.input.StudentInputDTO;
+import com.bosonit.bs9.student.infrastructure.dto.output.StudentOutputDTO;
+
+import java.util.List;
+
+public interface AddStudentPort {
+    StudentOutputDTO addStudent(StudentInputDTO studentInputDTO);
+    StudentOutputDTO addCourses(String idStudent, List<String> coursesInsert);
+}
