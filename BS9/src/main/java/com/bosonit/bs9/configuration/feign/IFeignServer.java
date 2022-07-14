@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.ws.rs.QueryParam;
 
-@FeignClient(name = "myFeign", url = "http://localhost:8080")
+@FeignClient(name = "myFeign", url = "http://localhost:8081")
 public interface IFeignServer {
 
     @GetMapping("/teacher/{id}")
