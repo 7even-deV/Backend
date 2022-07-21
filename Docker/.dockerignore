@@ -1,0 +1,5 @@
+# Ignore everything
+*
+
+# Allow files and directories
+!target/docker-spring-boot-1.0.0.jar

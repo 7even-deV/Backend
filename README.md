@@ -9,7 +9,8 @@
 ### `The exercises are ordered according to their completion and commit:`
 
 ***
-- [x] [(HEAD -> main) BS12 - Swagger, DevTools and CORS](https://github.com/Seven-z01/Backend/tree/main/BS12)
+- [x] [(HEAD -> main) Docker - PostgreSQL and Docker Compose](https://github.com/Seven-z01/Backend/tree/main/Docker)
+- [x] [BS12 - Swagger, DevTools and CORS](https://github.com/Seven-z01/Backend/tree/main/BS12)
 - [x] [BS9 - RestTemplate and Feign](https://github.com/Seven-z01/Backend/tree/main/BS9)
 - [x] [EJ3 - CRUD with relations between tables](https://github.com/Seven-z01/Backend/tree/main/EJ3)
 - [x] [BS8 - Personalizing Responses](https://github.com/Seven-z01/Backend/tree/main/BS8)
