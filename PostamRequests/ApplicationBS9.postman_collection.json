@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "08bf9e38-72d8-4d1f-a828-5a643c13297c",
+		"name": "ApplicationBS9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21353463"
+	},
+	"item": [
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "http://localhost:8080/person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Seven-z01\",\r\n    \"password\": \"1234\",\r\n    \"name\": \"Sergio\",\r\n    \"surname\": \"Fuentes Moya\",\r\n    \"companyEmail\": \"sergio.fuentes@bosonit.com\",\r\n    \"personalEmail\": \"Seven-z01@outlook.com\",\r\n    \"city\": \"Sevilla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/person",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/person/p-00001",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person/p-00001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"p-00001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/person/name/Sergio",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person/name/Sergio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"name",
+								"Sergio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/person/p-00002",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Seven-z01\",\r\n    \"password\": \"1234\",\r\n    \"name\": \"Teacher name\",\r\n    \"surname\": \"Teacher surname\",\r\n    \"company_email\": \"sergio.fuentes@bosonit.com\",\r\n    \"personal_email\": \"Seven-z01@outlook.com\",\r\n    \"city\": \"Sevilla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person/p-00002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"p-00002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/person/p-00003",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person/p-00003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"p-00003"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "http://localhost:8080/student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPerson\": \"p-00001\",\r\n    \"idTeacher\": \"t-00004\",\r\n    \"numHoursWeek\": 8,\r\n    \"comments\": \"Comments of Student\",\r\n    \"teacher\": \"myTeacher\",\r\n    \"branch\": \"myBranch\",\r\n    \"courses\": [\"c-00006\", \"c-00007\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/student/courseAdd/s-00009",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPerson\": \"p-00001\",\r\n    \"idTeacher\": \"t-00004\",\r\n    \"numHoursWeek\": 8,\r\n    \"comments\": \"myComments\",\r\n    \"teacher\": \"myTeacher\",\r\n    \"branch\": \"myBranch\",\r\n    \"courses\": [\"c-00008\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/courseAdd/s-00009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"courseAdd",
+								"s-00009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/student/s-00009",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/s-00009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"s-00009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/student/courseDelete/p-00009",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPerson\": \"p-00001\",\r\n    \"idTeacher\": \"t-00004\",\r\n    \"numHoursWeek\": 8,\r\n    \"comments\": \"myComments\",\r\n    \"teacher\": \"myTeacher\",\r\n    \"branch\": \"myBranch\",\r\n    \"courses\": [\"c-00007\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/courseDelete/s-00009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"courseDelete",
+								"s-00009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/student/s-00009",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPerson\": \"p-00001\",\r\n    \"idTeacher\": \"t-00004\",\r\n    \"numHoursWeek\": 8,\r\n    \"comments\": \"myComments\",\r\n    \"teacher\": \"myTeacher\",\r\n    \"branch\": \"myBranch\",\r\n    \"courses\": [\"c-00006\", \"c-00007\", \"c-00008\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/s-00009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"s-00009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/student/s-00009",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/s-00009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"s-00009"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "http://localhost:8080/course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTeacher\": \"t-00004\",\r\n    \"name\": \"Backend\",\r\n    \"comments\": \"Course of Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/course/c-00006",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course/c-00006",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"c-00006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/course/courses/c-00006",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course/courses/c-00006",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"courses",
+								"c-00006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/course/c-00006",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTeacher\": \"t-00004\",\r\n    \"name\": \"Backend\",\r\n    \"comments\": \"Course of Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course/c-00006",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"c-00006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/course/c-0008",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/course/c-0008",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"course",
+								"c-0008"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "http://localhost:8080/teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPerson\": \"p-00002\",\r\n    \"comments\": \"Teacher of Backend\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/teacher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teacher/t-00004",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/teacher/t-00004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"teacher",
+								"t-00004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teacher/t-00004",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPerson\": \"p-00002\",\r\n    \"comments\": \"Teacher of BigData\",\r\n    \"branch\": \"BigData\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/teacher/t-00004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"teacher",
+								"t-00004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/teacher/t-00005",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/teacher/t-00005",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"teacher",
+								"t-00005"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getTeacher",
+			"item": [
+				{
+					"name": "http://localhost:8080/getTeacher/restTemplate/t-00004",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/getTeacher/restTemplate/t-00004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getTeacher",
+								"restTemplate",
+								"t-00004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/getTeacher/feign/t-00004 Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/getTeacher/feign/t-00004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getTeacher",
+								"feign",
+								"t-00004"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
