@@ -1,15 +1,16 @@
-# Backend
+# [Backend](https://github.com/Seven-z01/Backend)
 
 <marquee style="width: 50%; color: green; font-size: 20px;">
-<b>Backend exercises in Bosonit</b></marquee>
+<b>Microservices in Java using Spring Boot for practices in Bosonit</b></marquee>
 
 #
 ![Bosonit-logo](https://cdn.bosonit.com/n-content/uploads/2021/12/bosonit_web.png)
 
-### `The exercises are ordered according to their completion and commit:`
+### `The microservices are ordered according to their completion and commit:`
 
 ***
-- [x] [(HEAD -> main) JVA2 - Records](https://github.com/Seven-z01/Backend/tree/main/JVA2)
+- [x] [(HEAD -> main) DBA1 - Advanced Queries: CriteriaBuilder](https://github.com/Seven-z01/Backend/tree/main/DBA1)
+- [x] [JVA2 - Records](https://github.com/Seven-z01/Backend/tree/main/JVA2)
 - [x] [Docker - PostgreSQL and Docker Compose](https://github.com/Seven-z01/Backend/tree/main/Docker)
 - [x] [BS12 - Swagger, DevTools and CORS](https://github.com/Seven-z01/Backend/tree/main/BS12)
 - [x] [BS9 - RestTemplate and Feign](https://github.com/Seven-z01/Backend/tree/main/BS9)

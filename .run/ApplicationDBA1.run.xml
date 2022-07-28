@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ApplicationDBA1" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="com.bosonit.dba1.ApplicationDBA1" />
+    <module name="DBA1" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.bosonit.dba1.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
