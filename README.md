@@ -9,7 +9,8 @@
 ### `The microservices are ordered according to their completion and commit:`
 
 ***
-- [x] [(HEAD -> main) SA2 - Upload and Download files](https://github.com/Seven-z01/Backend/tree/main/SA2)
+- [x] [(HEAD -> main) EJTE - Testing en SpringBoot: Mockito, JUnit & SonarQube](https://github.com/Seven-z01/Backend/tree/main/EJTE)
+- [x] [SA2 - Upload and Download files](https://github.com/Seven-z01/Backend/tree/main/SA2)
 - [x] [DBA2 - MongoRepository and MongoTemplate](https://github.com/Seven-z01/Backend/tree/main/DBA2)
 - [x] [DBA1 - Advanced Queries: CriteriaBuilder](https://github.com/Seven-z01/Backend/tree/main/DBA1)
 - [x] [JVA2 - Records](https://github.com/Seven-z01/Backend/tree/main/JVA2)
