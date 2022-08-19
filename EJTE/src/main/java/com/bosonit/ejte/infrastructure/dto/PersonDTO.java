@@ -25,11 +25,11 @@ public class PersonDTO {
     }
 
     public PersonDTO(Integer id, String username, String password, String name, String surname, Integer age) {
-        setId(id);
-        setUsername(username);
-        setPassword(password);
-        setName(name);
-        setSurname(surname);
-        setAge(age);
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 }

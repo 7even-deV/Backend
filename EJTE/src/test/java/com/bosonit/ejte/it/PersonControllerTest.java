@@ -1,4 +1,4 @@
-package com.bosonit.ejte.infrastructure.controller;
+package com.bosonit.ejte.it;
 
 import com.bosonit.ejte.domain.Person;
 import com.bosonit.ejte.infrastructure.dto.PersonDTO;
@@ -6,9 +6,7 @@ import com.bosonit.ejte.infrastructure.repository.PersonRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -29,6 +27,8 @@ import static org.springframework.http.HttpStatus.OK;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @Slf4j
+@Tag("IntegrationTest")
+@DisplayName("IntegrationTest - PersonControllerTest")
 class PersonControllerTest {
 
     @Autowired
@@ -47,6 +47,7 @@ class PersonControllerTest {
     }
 
     @Test
+    @DisplayName("addPersonTest")
     void addPersonTest() {
         PersonDTO personDTOTest = new PersonDTO(2, "Seven-z01", "1234", "Sergio", "Fuentes", 35);
         ResponseEntity<PersonDTO> responseEntity = new RestTemplate()
@@ -55,6 +56,7 @@ class PersonControllerTest {
     }
 
     @Test
+    @DisplayName("getAllTest")
     void getAllTest() throws URISyntaxException {
         RequestEntity<Void> requestEntity = RequestEntity.get(new URI("http://localhost:" + port + "/person"))
                 .accept(MediaType.APPLICATION_JSON).build();
@@ -66,6 +68,7 @@ class PersonControllerTest {
     }
 
     @Test
+    @DisplayName("getPersonIdTest")
     void getPersonIdTest() throws URISyntaxException {
         RequestEntity<Void> requestEntity = RequestEntity
                 .get(new URI("http://localhost:" + port + "/person/" + 1)).accept(MediaType.APPLICATION_JSON)
@@ -78,6 +81,7 @@ class PersonControllerTest {
     }
 
     @Test
+    @DisplayName("getPersonNameTest")
     void getPersonNameTest() throws URISyntaxException {
         RequestEntity<Void> requestEntity = RequestEntity.get(new URI("http://localhost:" + port + "/person/name/Sergio"))
                 .accept(MediaType.APPLICATION_JSON).build();
@@ -89,6 +93,7 @@ class PersonControllerTest {
     }
 
     @Test
+    @DisplayName("updatePersonTest")
     void updatePersonTest() {
         PersonDTO personDTOTest = new PersonDTO(null, "Seven-z01", "1234", "Sergio", "Fuentes Moya", 36);
         RequestEntity<PersonDTO> requestEntity = RequestEntity.put("http://localhost:" + port + "/person/" + 1)
@@ -100,6 +105,7 @@ class PersonControllerTest {
     }
 
     @Test
+    @DisplayName("deletePersonTest")
     void deletePersonTest() {
         RequestEntity<Void> requestEntity = RequestEntity.delete("http://localhost:" + port + "/person/" + 1)
                 .accept(MediaType.ALL).build();

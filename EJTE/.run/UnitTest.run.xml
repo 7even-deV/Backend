@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UnitTest" type="JUnit" factoryName="JUnit">
+    <module name="EJTE" />
+    <option name="PACKAGE_NAME" value="com.bosonit.ejte" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="tags" />
+    <tag value="UnitTest" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
