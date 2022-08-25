@@ -1,0 +1,31 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ApplicationConsumer" type="Application" factoryName="Application">
+    <envs>
+      <env name="server.port" value="8081" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.bosonit.ejka.consumer.ApplicationConsumer" />
+    <module name="EJKA" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.bosonit.ejka.consumer.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+  <configuration default="false" name="ApplicationConsumer" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.bosonit.kafka.ApplicationConsumer" />
+    <module name="Consumer" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.bosonit.kafka.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

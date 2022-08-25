@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "b36c1498-d3fa-4e8a-ab12-b9fc9189524c",
+		"name": "ApplicationEJKA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21353463"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"username\": \"Seven-z01\",\r\n    \"password\": \"1234\",\r\n    \"email\": \"sergio.fuentes@bosonit.com\",\r\n    \"message\": \"Hello World!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

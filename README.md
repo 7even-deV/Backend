@@ -9,7 +9,8 @@
 ### `The microservices are ordered according to their completion and commit:`
 
 ***
-- [x] [(HEAD -> main) EJS3 - Security in SpringBoot: MVC, Oauth2 & JWT](https://github.com/Seven-z01/Backend/tree/main/EJS3)
+- [x] [(HEAD -> main) EJKA - Apache Kafka and RabbitMQ](https://github.com/Seven-z01/Backend/tree/main/EJKA)
+- [x] [EJS3 - Security in SpringBoot: MVC, Oauth2 & JWT](https://github.com/Seven-z01/Backend/tree/main/EJS3)
 - [x] [EJTE - Testing in SpringBoot: Mockito, JUnit & SonarQube](https://github.com/Seven-z01/Backend/tree/main/EJTE)
 - [x] [SA2 - Upload and Download files](https://github.com/Seven-z01/Backend/tree/main/SA2)
 - [x] [DBA2 - MongoRepository and MongoTemplate](https://github.com/Seven-z01/Backend/tree/main/DBA2)
