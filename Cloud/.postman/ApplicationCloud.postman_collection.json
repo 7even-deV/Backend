@@ -1,0 +1,797 @@
+{
+	"info": {
+		"_postman_id": "771b4f93-0652-40f8-9058-5f154c87790c",
+		"name": "ApplicationCloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21353463"
+	},
+	"item": [
+		{
+			"name": "Web (client) OPEN",
+			"item": [
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "Token Admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "adminbus@business.local",
+										"type": "default"
+									},
+									{
+										"key": "password",
+										"value": "1234",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Token User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "sergio.fuentes@bosonit.com",
+										"type": "default"
+									},
+									{
+										"key": "password",
+										"value": "1234",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/business/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "CREATE client",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sergio\",\r\n    \"surname\": \"Fuentes\",\r\n    \"email\": \"sergio.fuentes@bosonit.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/business/client",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"client"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip",
+					"item": [
+						{
+							"name": "GET trip BY ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/business/trip/bdcdd937-b731-4ced-86f4-3e362c86c537",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"trip",
+										"bdcdd937-b731-4ced-86f4-3e362c86c537"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET trip DepartureAndArrivalAndDate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/business/trip/details?departure=SEV&arrival=BCN&date=2022-10-18T17:30:00.000Z",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"trip",
+										"details"
+									],
+									"query": [
+										{
+											"key": "departure",
+											"value": "SEV"
+										},
+										{
+											"key": "arrival",
+											"value": "BCN"
+										},
+										{
+											"key": "date",
+											"value": "2022-10-18T17:30:00.000Z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET trip DepartureAndArrivalAndLocalDate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/business/trip/detailsLocalDate?departure=SEV&arrival=BCN&localDate=2022-10-18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"trip",
+										"detailsLocalDate"
+									],
+									"query": [
+										{
+											"key": "departure",
+											"value": "SEV"
+										},
+										{
+											"key": "arrival",
+											"value": "BCN"
+										},
+										{
+											"key": "localDate",
+											"value": "2022-10-18"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Web (client) USER",
+			"item": [
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "GET client BY ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwOGI0OWNjZS1jNGEyLTRhMTMtYmM0MC0wMThiMzNkNWE3MWQiLCJzdWIiOiJzZXJnaW8uZnVlbnRlc0Bib3Nvbml0LmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjYyMTUxODM1LCJleHAiOjE2NjIxNTU0MzV9.FsqhiGNnmY1DNY4-DB-dL8TShd9ZGYbZZgINhiBjLxfiTwT9wA5aMV6zabNuDk8cbcjILzI2pdF0NmZMiFyukA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/business/client/08b49cce-c4a2-4a13-bc40-018b33d5a71d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"client",
+										"08b49cce-c4a2-4a13-bc40-018b33d5a71d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE client",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwOGI0OWNjZS1jNGEyLTRhMTMtYmM0MC0wMThiMzNkNWE3MWQiLCJzdWIiOiJzZXJnaW8uZnVlbnRlc0Bib3Nvbml0LmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjYyMTUxODM1LCJleHAiOjE2NjIxNTU0MzV9.FsqhiGNnmY1DNY4-DB-dL8TShd9ZGYbZZgINhiBjLxfiTwT9wA5aMV6zabNuDk8cbcjILzI2pdF0NmZMiFyukA",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sergio\",\r\n    \"surname\": \"Fuentes Moya\",\r\n    \"email\": \"sergio.fuentes@bosonit.com\",\r\n    \"password\": \"5678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/business/client/08b49cce-c4a2-4a13-bc40-018b33d5a71d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"client",
+										"08b49cce-c4a2-4a13-bc40-018b33d5a71d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ticket",
+					"item": [
+						{
+							"name": "CREATE ticket",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwOGI0OWNjZS1jNGEyLTRhMTMtYmM0MC0wMThiMzNkNWE3MWQiLCJzdWIiOiJzZXJnaW8uZnVlbnRlc0Bib3Nvbml0LmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjYyMTUxODM1LCJleHAiOjE2NjIxNTU0MzV9.FsqhiGNnmY1DNY4-DB-dL8TShd9ZGYbZZgINhiBjLxfiTwT9wA5aMV6zabNuDk8cbcjILzI2pdF0NmZMiFyukA",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"details\": \"SEV - BCN\",\r\n    \"idClient\": \"b8df89e4-1e1d-4614-bd47-c55cc4afd2da\",\r\n    \"idTrip\": \"32348f27-9ea9-4778-8262-16944422febd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/business/ticket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"business",
+										"ticket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ticket BY ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyZWYyNDZjOS1kNzZjLTRjN2YtYTI4YS1mZmIzMTYzMDM3YmEiLCJzdWIiOiJzZXJnaW8uZnVlbnRlc0Bib3Nvbml0LmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjYxODY1MzEwLCJleHAiOjE2NjE4Njg5MTB9.XKPkRytPYm0YPvbBj_nDuZ-Xt44GczNZBGXUxn_WP7eCWVldQ0jMoqMA46yPCN7mHj0Tc11u6uIzCeid72-zNg",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/business/ticket/909bb68b-3a0b-4772-85bc-2ea33ea0c61e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"business",
+										"ticket",
+										"909bb68b-3a0b-4772-85bc-2ea33ea0c61e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE ticket",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5NGUxMTFkYS03ZGZiLTQ4MWQtYWYxOC0wMjllYWM1MDFmODMiLCJzdWIiOiJzZXJnaW8uZnVlbnRlc0Bib3Nvbml0LmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjYyMTM5MDMxLCJleHAiOjE2NjIxNDI2MzF9.q28q8Lw4vvDmH2DYqXMeNS0Y-YFgjUvUw-Yvr9wfPpyIstVv9TogHzZuY8i--dpH6DTTTfoYAjuypnmOiTFnjA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/ticket/1a8629b9-be44-4de9-9f4f-212947f85bba",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"ticket",
+										"1a8629b9-be44-4de9-9f4f-212947f85bba"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Business (back) ADMIN",
+			"item": [
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "GET clients",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI2ZGM2ZjNmZC02Nzc2LTQ0YTctOWQ1ZC03ZjViZTI0MDdmNzYiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjczNTE3NiwiZXhwIjoxNjYyNzM4Nzc2fQ.kkkfrLu9WGCLfGYvXZkqYljddEL-EqsM63dW6ghpcClGe-pEbJ9-YQCQTkkB-z2ge_165ktWeggtsyGKuKw6BQ",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/client",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"client"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET client BY EMAIL",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4YzBhMTE2Yy1jYjkxLTRhNjktYWQ3NC03ODkyZTMyYTdiNDUiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjEzOTAzNCwiZXhwIjoxNjYyMTQyNjM0fQ.c7GEXWL8UeptCw9F-qG66YIeamRSTh8js24psQCXFW0AOg-gjTUoWy070rjYNmDwk-kNts9G8f53mcXPp5-1Sw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/client/email/sergio.fuentes@bosonit.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"client",
+										"email",
+										"sergio.fuentes@bosonit.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE client",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4YzBhMTE2Yy1jYjkxLTRhNjktYWQ3NC03ODkyZTMyYTdiNDUiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjEzOTAzNCwiZXhwIjoxNjYyMTQyNjM0fQ.c7GEXWL8UeptCw9F-qG66YIeamRSTh8js24psQCXFW0AOg-gjTUoWy070rjYNmDwk-kNts9G8f53mcXPp5-1Sw",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Sergio\",\r\n    \"surname\": \"Fuentes Moya\",\r\n    \"email\": \"sergio.fuentes@bosonit.com\",\r\n    \"password\": \"5678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/business/client/8c0a116c-cb91-4a69-ad74-7892e32a7b45",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"client",
+										"8c0a116c-cb91-4a69-ad74-7892e32a7b45"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Client",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4YzBhMTE2Yy1jYjkxLTRhNjktYWQ3NC03ODkyZTMyYTdiNDUiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjEzOTAzNCwiZXhwIjoxNjYyMTQyNjM0fQ.c7GEXWL8UeptCw9F-qG66YIeamRSTh8js24psQCXFW0AOg-gjTUoWy070rjYNmDwk-kNts9G8f53mcXPp5-1Sw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/client/8c0a116c-cb91-4a69-ad74-7892e32a7b45",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"client",
+										"8c0a116c-cb91-4a69-ad74-7892e32a7b45"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip",
+					"item": [
+						{
+							"name": "CREATE trip",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI2ZGM2ZjNmZC02Nzc2LTQ0YTctOWQ1ZC03ZjViZTI0MDdmNzYiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjczNTE3NiwiZXhwIjoxNjYyNzM4Nzc2fQ.kkkfrLu9WGCLfGYvXZkqYljddEL-EqsM63dW6ghpcClGe-pEbJ9-YQCQTkkB-z2ge_165ktWeggtsyGKuKw6BQ",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"date\": \"2022-10-18T17:00:00.000+00:00\",\r\n   \"departure\": \"SEV\", \r\n   \"arrival\": \"BCN\",\r\n   \"issue\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/business/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET trips",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3YmNhMzUwOC0wNGZmLTRlOTMtODRkYi0zYjAzNDk4NjQ3OGIiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjE1MTc4MiwiZXhwIjoxNjYyMTU1MzgyfQ.KqzJ6ZRUgyEzeXDcgt1KY-LQaEBzuwdgF3gjouW94JRot_l9uOYis2rxzMv3762KXXbLtWfD3wBhLM9r_45L-w",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE trip",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3YmNhMzUwOC0wNGZmLTRlOTMtODRkYi0zYjAzNDk4NjQ3OGIiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjE1MTc4MiwiZXhwIjoxNjYyMTU1MzgyfQ.KqzJ6ZRUgyEzeXDcgt1KY-LQaEBzuwdgF3gjouW94JRot_l9uOYis2rxzMv3762KXXbLtWfD3wBhLM9r_45L-w",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"date\": \"2022-10-18T17:30:00.000+00:00\",\r\n   \"departure\": \"SEV\", \r\n   \"arrival\": \"BCN\",\r\n   \"issue\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/business/trip/bdcdd937-b731-4ced-86f4-3e362c86c537",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"trip",
+										"bdcdd937-b731-4ced-86f4-3e362c86c537"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE trip",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4YzBhMTE2Yy1jYjkxLTRhNjktYWQ3NC03ODkyZTMyYTdiNDUiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjEzOTAzNCwiZXhwIjoxNjYyMTQyNjM0fQ.c7GEXWL8UeptCw9F-qG66YIeamRSTh8js24psQCXFW0AOg-gjTUoWy070rjYNmDwk-kNts9G8f53mcXPp5-1Sw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/trip/8be82b02-3477-4405-bda5-aa188ce18b8a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"trip",
+										"8be82b02-3477-4405-bda5-aa188ce18b8a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ticket",
+					"item": [
+						{
+							"name": "GET tickets",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJlZGQ3NDA1Mi1kODJmLTQ5YTUtODYxMC0zM2I1M2RlZTFjN2QiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjEzMjE0NSwiZXhwIjoxNjYyMTM1NzQ1fQ.gji3zpqNkM39ZwIDiicpd8Ei3RJ4ZAsqd3h5dvEcPgviGtwbAaoK9_5xdCXGcz5qpICCgeSX3HEXwNX6tvG5AA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/ticket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"ticket"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Mail",
+					"item": [
+						{
+							"name": "GET mails",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3YmNhMzUwOC0wNGZmLTRlOTMtODRkYi0zYjAzNDk4NjQ3OGIiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjE1MTc4MiwiZXhwIjoxNjYyMTU1MzgyfQ.KqzJ6ZRUgyEzeXDcgt1KY-LQaEBzuwdgF3gjouW94JRot_l9uOYis2rxzMv3762KXXbLtWfD3wBhLM9r_45L-w",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/mail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"mail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET mail BY ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3YmNhMzUwOC0wNGZmLTRlOTMtODRkYi0zYjAzNDk4NjQ3OGIiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjE1MTc4MiwiZXhwIjoxNjYyMTU1MzgyfQ.KqzJ6ZRUgyEzeXDcgt1KY-LQaEBzuwdgF3gjouW94JRot_l9uOYis2rxzMv3762KXXbLtWfD3wBhLM9r_45L-w",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/mail/d578e350-847a-4836-90f3-49c724ff4d60",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"mail",
+										"d578e350-847a-4836-90f3-49c724ff4d60"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET mail BY DepartureAndArrival",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3YmNhMzUwOC0wNGZmLTRlOTMtODRkYi0zYjAzNDk4NjQ3OGIiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjE1MTc4MiwiZXhwIjoxNjYyMTU1MzgyfQ.KqzJ6ZRUgyEzeXDcgt1KY-LQaEBzuwdgF3gjouW94JRot_l9uOYis2rxzMv3762KXXbLtWfD3wBhLM9r_45L-w",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/mail/details?departure=SEV&arrival=BCN",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"mail",
+										"details"
+									],
+									"query": [
+										{
+											"key": "departure",
+											"value": "SEV"
+										},
+										{
+											"key": "arrival",
+											"value": "BCN"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET mail BY LocalDate",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3YmNhMzUwOC0wNGZmLTRlOTMtODRkYi0zYjAzNDk4NjQ3OGIiLCJzdWIiOiJhZG1pbmJ1c0BidXNpbmVzcy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY2MjE1MTc4MiwiZXhwIjoxNjYyMTU1MzgyfQ.KqzJ6ZRUgyEzeXDcgt1KY-LQaEBzuwdgF3gjouW94JRot_l9uOYis2rxzMv3762KXXbLtWfD3wBhLM9r_45L-w",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8090/business/mail/detailsLocalDate?localDate=2022-10-18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"business",
+										"mail",
+										"detailsLocalDate"
+									],
+									"query": [
+										{
+											"key": "localDate",
+											"value": "2022-10-18"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
